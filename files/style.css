@@ -4082,12 +4082,10 @@ position: absolute;
 }
 
 .tender-page__date {
-	width: 50%;
-	margin-left: auto;
+	margin-right: auto;
 }
 
 .tender-page__budget {
-	width: 50%;
 	text-align: right;
 }
 
@@ -4313,12 +4311,14 @@ color: #769daa;
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
+	margin-left: -5px;
+	margin-right: -5px;
 }
 
 .alt-tenders__card {
-	width: calc(25% - 8px);
-	margin-left: 4px;
-	margin-right: 4px;
+	width: calc(25% - 10px);
+	margin-left: 5px;
+	margin-right: 5px;
 	height: 120px;
 	background: url('../images/alt-tender.png') center no-repeat;
 	background-size: cover;
@@ -4355,6 +4355,7 @@ color: #769daa;
 }
 
 .tender-page .slick-dots {
+	padding: 0;
 	display: flex;
 	justify-content: center;
 	width: 100%;
@@ -5922,38 +5923,84 @@ button.btn-price:active, button.btn-price:hover {
 
 .tender-page__inner {
 	min-height: calc(100vh - 45px);
-	padding: 5px 10px;
+	padding: 6px 9px;
 }
 
 .tender-page .breadcrumb {
 	padding-top: 3px;
 	padding-bottom: 3px;
+	margin-bottom: 4px;
 	font-size: 10px;
 }
 
+.tender-page__wrapper {
+	border-radius: 4px;
+}
+
 .tender-page__line {
-	padding: 3px 10px;
-	font-size: 12px;
+	padding: 4px 8px;
+	font-size: 10px;
   line-height: 16px;
 }
 
 .tender-page__title {
-	font-size: 16px;
-	line-height: 18px;
-	margin-top: 5px;
-	margin-bottom: 5px;
+	font-size: 14px;
+	line-height: 16px;
+	margin-top: 7px;
+	margin-bottom: 9px;
 }
-.tender-page__date {
-	margin-top: 2px;
-	margin-bottom: 2px;
+.tender-page__address {
+	margin-top: 4px;
+}
+.tender-page__people {
+	margin-top: 0;
+}
+
+.tender-page__info {
+	margin-top: 8px;
+}
+.tender-page__transport {
+	margin-bottom: 9px;
+	padding-left: 26px;
+}
+.tender-page__transport-icon {
+	width: 18px;
+	height: 18px;
+	background-size: 16px;
+}
+
+.tender-page__animal {
+	padding-left: 28px;
+	margin-bottom: 9px;
+}
+
+.tender-page__animal:before {
+	width: 18px;
+	height: 18px;
+	background-size: 16px;
+}
+
+.tender-page__budget {
+	margin-top: 4px;
+	width: 100%;
+	text-align: left;
+}
+
+.tender-page__actual {
+	height: 20px;
+	line-height: 20px;
+	font-size: 10px;
+	margin-top: 6px;
 }
 
 .tender-page__info-number {
 	font-size: 10px;
+	padding-top: 20px;
 	width: 40px;
 }
 .tender-page__info-number:before {
-    font-size: 10px;
+		font-size: 10px;
+		top: 2px;
 }
 
 .block-main .col-3 .dropdown .dropdown-menu {
@@ -5976,7 +6023,7 @@ button.btn-price:active, button.btn-price:hover {
 .share__button {
 	width: 32px;
   height: 32px;
-  background-size: 15px;
+  background-size: 13px;
 }
 
 .tender-page .like {
@@ -5986,10 +6033,11 @@ button.btn-price:active, button.btn-price:hover {
 }
 
 .tender-page__suggest {
-	width: 40px;
+	width: 110px;
 	height: 32px;
-	background-size: 40px;
-	margin-left: 0;
+	line-height: 32px;
+	font-size: 15px;
+	margin-left: 0;	
 }
 
 .tender-page__dropdown-menu.dropdown-menu>li>a {
@@ -5997,20 +6045,76 @@ button.btn-price:active, button.btn-price:hover {
 	padding: 5px 10px;
 }
 
+.tender-page__hashtag {
+	font-size: 10px;
+	margin-top: 5px;
+}
+
+.tender-page__user-text {
+	padding-bottom: 8px;
+}
+
+.tender-page__user-text p {
+	font-size: 10px;
+	line-height: 16px;
+	margin-top: 6px;
+}
+
 .tender-page__text {
-	font-size: 9px;
+	margin-top: 17px;
+	font-size: 10px;
 	padding-left: 10px;
 	padding-right: 10px;
 }
 
 .tender-page__text h4 {
-font-size: 11px;
+	margin-top: 0;
+font-size: 14px;
+line-height: 16px;
+margin-bottom: 12px;
 }
 
-.tender-page__text ul {
-	padding-left: 10px;
+.tender-page__text ul + h4 {
+	margin-top: 17px;
+}
+.alt-tenders {
+	padding-top: 12px;
+}
+.alt-tenders__title {
+font-size: 14px;
+line-height: 16px;
+}
+.alt-tenders__inner {
+	margin-top: 12px;
+}
+.alt-tenders__card {
+	width: calc(50% - 12px);
+	margin-left: 6px;
+	margin-right: 6px;
+	height: 100px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+}
+.alt-tenders__card-title {
+	font-size: 12px;
+	height: 96%;
 }
 
+
+.tender-page .slick-dots {
+	margin-top: 0;
+	margin-bottom: 10px;
+}
+
+.tender-page .slick-dots li {
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.tender-page .slick-dots button {
+	width: 8px;
+	height: 8px;
+}
 .chats-page .block-main.chat-item {
 	padding-top: 7px;
 }
