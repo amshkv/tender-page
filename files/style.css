@@ -3959,19 +3959,28 @@ position: absolute;
 }
 
 .tender-page__text {
-	margin-top: 30px;
-	padding-left: 20px;
-	padding-right: 20px;
+	margin-top: 22px;
 	color: #769daa;
 	font-size: 16px;
+	line-height: 1.2;
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
 .tender-page__text h4 {
 	text-align: center;
 	font-size: 22px;
 	margin-top: 20px;
+	margin-bottom: 8px;
 }
 
+.tender-page__text ul {
+	padding: 0;
+}
+
+.tender-page__text ul + h4 {
+	margin-top: 36px;
+}
 .tender-page__text-def {
 	color: #b7b7b7;
 }
@@ -4308,6 +4317,8 @@ color: #769daa;
 
 .alt-tenders__card {
 	width: calc(25% - 8px);
+	margin-left: 4px;
+	margin-right: 4px;
 	height: 120px;
 	background: url('../images/alt-tender.png') center no-repeat;
 	background-size: cover;
@@ -4339,6 +4350,37 @@ color: #769daa;
 	line-height: 16px;
 	margin: 0;
 	position: relative;
+}
+
+.tender-page .slick-dots {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	align-items: center;
+	list-style: none;
+	margin-top: 11px;
+	margin-bottom: 10px;
+}
+
+.tender-page .slick-dots li {
+	margin-left: 4px;
+	margin-right: 4px;
+}
+
+.tender-page .slick-dots button {
+	width: 12px;
+	height: 12px;
+	background-color: rgba(118, 157, 170, 0.5);
+	display: block;
+	border: none;
+	padding: 0;
+	margin: 0;
+	border-radius: 100%;
+	text-indent: -9999px;
+	outline: none;
+}
+.tender-page .slick-dots .slick-active button {
+	background-color: #769daa;
 }
 
 .modal--video {

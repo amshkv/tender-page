@@ -11,6 +11,8 @@
   <meta name="format-detection" content="telephone=no">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <!--        <link rel="shortcut icon" href="design/images/#" />-->
+
+  <link rel="stylesheet" href="./slick.css">
   <link rel="stylesheet" type="text/css" href="./style.css">
   <link rel="stylesheet" type="text/css" href="./bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="./bootstrap_col_15.css">
@@ -735,12 +737,23 @@
   <script src="./dt_functions.js"></script>
   <script src="./tender-page.js"></script>
 
+  <script src="./slick.min.js"></script>
+
   <script> username = ""; </script>
   <script> rqId = "218"; </script>
   <script> isAuthorized = ""; </script>
 
   <script>
-    $('.bxslider').bxSlider({});
+
+    $('.alt-tenders__inner').slick({
+      infinite: true,
+      slidesToShow: 4,
+      slidesToScroll: 4,
+      arrows: false,
+      dots: true
+    });
+
+
   </script>
 
   <!-- BEGIN JIVOSITE CODE -->
