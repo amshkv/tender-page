@@ -4348,8 +4348,10 @@ color: #769daa;
 	font-size: 16px;
 	font-weight: 400;
 	line-height: 16px;
+	overflow: hidden;
 	margin: 0;
 	position: relative;
+	height: 98%;
 }
 
 .tender-page .slick-dots {
