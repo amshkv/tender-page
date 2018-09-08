@@ -625,7 +625,11 @@
                   </div>
                 </div>
               </div>
-            </div><a href="https://h-dev.8h.ru/#" data-req-id="218" class="favorites like"></a><a href="https://h-dev.8h.ru/#" class="to-offer tender-page__suggest relation dropdown-toggle" data-offer-id="218" data-place="Санкт-Петербург" title="Предложить">Предложить</a><ul class="dropdown-menu tender-page__dropdown-menu"></ul>
+            </div><a href="https://h-dev.8h.ru/#" data-req-id="218" class="favorites like"></a><a href="https://h-dev.8h.ru/#" class="to-offer tender-page__suggest relation dropdown-toggle" data-offer-id="218" data-place="Санкт-Петербург" title="Предложить">Предложить</a>
+            <ul class="dropdown-menu tender-page__dropdown-menu">
+              <li><a href="#" data-offer-id="510"><span>РАВНЫМ ОБРАЗОМ КОНСУЛЬТАЦИЯ С ШИРОКИМ АКТИВОМ ТРЕБУЮТ ОПРЕДЕЛЕНИЯ И УТОЧНЕНИЯ.</span><span class="tender-page__text-def">510</span></a></li>
+              <li><a href="#" data-offer-id="510"><span>РАВНЫМ ОБРАЗОМ КОНСУЛЬТАЦИЯ</span><span class="tender-page__text-def">510</span></a></li>
+            </ul>
           </div>
           <div class="tender-page__line">
             <div class="tender-page__hashtag">#отдых #природа #рыбалка #длямужиков</div>
@@ -768,6 +772,12 @@
         }
       ]
     });
+
+
+    $('.to-offer').click(function (e) {
+      e.preventDefault();
+      $('.dropdown-menu').show();
+    })
 
 
   </script>
