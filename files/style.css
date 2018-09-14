@@ -4310,6 +4310,54 @@ color: #769daa;
 color: #769daa;
 }
 
+.tender-page__wrapper {
+	position: relative;
+}
+
+.tender-page__wrapper--no-active:before {
+	content: '';
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.2);
+	position: absolute;
+	border-radius: 6px;
+	z-index: 10;
+	pointer-events: none;
+}
+.tender-page__wrapper--no-active .tender-page__title {
+	color: #b7b7b7;
+}.tender-page__wrapper--no-active .tender-page__line {
+	color: #b7b7b7;
+}
+.tender-page__wrapper--no-active .tender-page__transport-icon--aircraft {
+	background-image: url('../images/flight_gray.png');
+}
+.tender-page__wrapper--no-active .tender-page__animal:before {
+	background-image: url('../images/pets_gray.png');
+}
+.tender-page__wrapper--no-active .tender-page__actual {
+	color: #b7b7b7;
+}
+.tender-page__wrapper--no-active .tender-page__info-number:before {
+	color: #b7b7b7;
+}
+.tender-page__wrapper--no-active .share__button {
+	background-color: #b7b7b7;
+}
+.tender-page .tender-page__wrapper--no-active .like {
+	background-color: #b7b7b7;
+}
+
+.tender-page__wrapper--no-active .tender-page__suggest {
+	background-color: #b7b7b7;
+}
+
+.tender-page__wrapper--no-active .tender-page__hashtag {
+	color: #b7b7b7;
+}
+
 .alt-tenders {
 	padding-top: 17px;
 }
@@ -5952,6 +6000,10 @@ button.btn-price:active, button.btn-price:hover {
 }
 
 .tender-page__wrapper {
+	border-radius: 4px;
+}
+
+.tender-page__wrapper--no-active:before {
 	border-radius: 4px;
 }
 
