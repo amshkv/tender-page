@@ -4324,7 +4324,23 @@ color: #769daa;
 	position: absolute;
 	border-radius: 6px;
 	z-index: 10;
-	pointer-events: none;
+}
+.tender-page__wrapper--no-active:after {
+	content: 'Тендер снят';
+	position: absolute;
+	top: 0;
+	padding-top: 80px;	
+	width: 100%;
+	left: 0;
+	text-align: center;
+	display: block;
+	color: white;
+	font-size: 22px;
+	font-weight: 400;
+	line-height: 25px;
+	z-index: 100;
+	margin: 0;
+	background: url("../images/not-actual.png") center no-repeat;
 }
 .tender-page__wrapper--no-active .tender-page__title {
 	color: #b7b7b7;
@@ -6005,6 +6021,14 @@ button.btn-price:active, button.btn-price:hover {
 
 .tender-page__wrapper--no-active:before {
 	border-radius: 4px;
+}
+
+.tender-page__wrapper--no-active:after {
+	font-size: 14px;
+	line-height: 16px;
+	background-size: 16px;
+	padding-top: 50px;
+	top: 25px;
 }
 
 .tender-page__line {
