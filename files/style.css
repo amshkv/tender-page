@@ -4328,7 +4328,7 @@ color: #769daa;
 .tender-page__wrapper--no-active:after {
 	content: 'Тендер снят';
 	position: absolute;
-	top: 0;
+	top: 25px;
 	padding-top: 80px;	
 	width: 100%;
 	left: 0;
@@ -6028,7 +6028,6 @@ button.btn-price:active, button.btn-price:hover {
 	line-height: 16px;
 	background-size: 16px;
 	padding-top: 50px;
-	top: 25px;
 }
 
 .tender-page__line {
