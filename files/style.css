@@ -4441,6 +4441,9 @@ color: #769daa;
 .tender-page__wrapper--no-active .tender-page__animal:before {
 	background-image: url('../images/pets_gray.png');
 }
+.tender-page__wrapper--no-active .tender-page__transfer:before {
+	background-image: url('../images/car_gray.png');
+}
 .tender-page__wrapper--no-active .tender-page__info-number-views:before {
 	background-image: url('../images/eye-small_gray.png');
 }
