@@ -3927,6 +3927,49 @@ position: absolute;
   font-weight: 400;
 }
 
+
+.metrics {
+	background-color: #284f56;
+}
+
+.metrics__inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 40px;
+	padding-left: 38px;
+	padding-right: 38px;
+}
+
+.metric {
+	font-size: 16px;
+	line-height: 16px;
+	color: #fff;
+	padding-left: 30px;
+	position: relative;
+}
+
+.metric:before {
+	content: '';
+	width: 22px;
+	height: 22px;
+	position: absolute;
+	left: 0;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.metric--users:before {
+	background-image: url('../images/users-icon.png');
+	top: -3px;
+}
+
+.metric--offers:before {
+	background-image: url('../images/offer-icon.png');
+	top: -4px;
+}
+
+
 .tender-page.common-page .header__tab {
 	width: 200px;
 	text-align: center;
@@ -4010,7 +4053,6 @@ position: absolute;
 .tender-page__line--flex {
 	display: flex;
 	flex-wrap: wrap;
-	align-items: center;
 	position: relative;
 }
 
@@ -4038,16 +4080,30 @@ position: absolute;
 .tender-page__info {
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
 	flex-wrap: wrap;
 	margin-top: 20px;
 }
 
+.tender-page__info-line {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	align-items: flex-start;
+}
+
+.tender-page__transport-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	width: calc(100% - 150px);
+}
+
 .tender-page__transport {
 	margin-bottom: 20px;
+	display: inline-block;
 	margin-right: auto;
 	position: relative;
 	padding-left: 40px;
+	margin-right: 45px;
 }
 
 .tender-page__transport-icon {
@@ -4063,6 +4119,25 @@ position: absolute;
 .tender-page__transport-icon--aircraft {
 	background: url('../images/flight.png') center no-repeat;
 }
+
+.tender-page__transfer {
+	position: relative;
+	padding-left: 40px;
+	display: inline-block;
+	margin-bottom: 20px;
+}
+
+.tender-page__transfer:before {
+	content: '';
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	background: url('../images/auto.png') center no-repeat;
+}
+
 .tender-page__animal {
 	text-align: right;
 	margin-bottom: 20px;
@@ -4082,7 +4157,6 @@ position: absolute;
 }
 
 .tender-page__date {
-	width: 70%;
 	margin-right: auto;
 }
 
@@ -4103,26 +4177,40 @@ position: absolute;
 	margin-top: 12px;
 	text-align: center;
 }
-.tender-page__info-number {
-  position: relative;
-	padding-top: 27px;
-	color: #b7b7b7;
+
+.tender-page__info-number-wrapper {
+	margin-top: 5px;
 	margin-right: 5px;
-	width: 70px;
-	font-size: 16px;
-}
-.tender-page__info-number:before {
-    content: 'Тендер';
-    color: #77b97e;
-    font-family: Roboto;
-    font-weight: 400;
-    display: block;
-		position: absolute;
-		font-size: 16px;
-    top: 0;
-    left: 0;
 }
 
+.tender-page__info-number {
+	color: #b7b7b7;
+}
+
+.tender-page__info-number-text {
+	color: #77b97e;
+}
+
+.tender-page__info-number-inner {
+	display: flex;
+	margin-top: 6px;
+}
+
+.tender-page__info-number-views {
+	position: relative;
+	padding-left: 30px;
+	margin-right: 18px;
+}
+
+.tender-page__info-number-views:before {
+	content: '';
+	width: 22px;
+	height: 22px;
+	position: absolute;
+	left: 0;
+	top: -2px;
+	background: url('../images/eye-small.png') center no-repeat;
+}
 
 
 .tender-page .tender-page__dropdown-menu {
@@ -4353,10 +4441,13 @@ color: #769daa;
 .tender-page__wrapper--no-active .tender-page__animal:before {
 	background-image: url('../images/pets_gray.png');
 }
+.tender-page__wrapper--no-active .tender-page__info-number-views:before {
+	background-image: url('../images/eye-small_gray.png');
+}
 .tender-page__wrapper--no-active .tender-page__actual {
 	color: #b7b7b7;
 }
-.tender-page__wrapper--no-active .tender-page__info-number:before {
+.tender-page__wrapper--no-active .tender-page__info-number-text {
 	color: #b7b7b7;
 }
 .tender-page__wrapper--no-active .share__button {
@@ -4829,6 +4920,16 @@ color: #769daa;
 
 /*large-phones*/
 @media screen and (max-width: 767px) {
+
+	.metrics__inner {
+		flex-wrap: wrap;
+		height: 60px;
+	}
+
+	.metric {
+		width: 100%;
+	}
+
 	.cabinet-hoteler-page:before {
 		display: none;
 	}
@@ -5030,6 +5131,35 @@ color: #769daa;
 
 /*small-phones*/
 @media screen and (max-width: 599px) {
+
+	.metrics__inner {
+		height: 50px;
+		padding-left: 9px;
+		padding-right: 9px;
+		padding-top: 6px;
+		padding-bottom: 4px;
+		box-sizing: border-box;
+	}
+
+	.metric {
+		font-size: 10px;
+		padding-left: 21px;
+	}
+
+	.metric:before {
+		width: 14px;
+		height: 14px;
+		background-size: 12px;
+		left: -1px;
+	}
+
+	.metric--users:before {
+		top: 0;
+	}
+
+	.metric--offers:before {
+		top: -1px;
+	}
 
 	.other-host {
 		font-size: 12px;
@@ -6052,9 +6182,18 @@ button.btn-price:active, button.btn-price:hover {
 .tender-page__info {
 	margin-top: 8px;
 }
+
+.tender-page__transport-wrapper {
+	width: calc(100% - 95px);
+}
 .tender-page__transport {
-	margin-bottom: 9px;
+	margin-bottom: 6px;
 	padding-left: 26px;
+	margin-right: 10px;
+}
+.tender-page__transfer {
+	padding-left: 26px;
+	margin-bottom: 6px;
 }
 .tender-page__transport-icon {
 	width: 18px;
@@ -6062,9 +6201,15 @@ button.btn-price:active, button.btn-price:hover {
 	background-size: 16px;
 }
 
+.tender-page__transfer:before {
+	width: 18px;
+	height: 18px;
+	background-size: 14px;
+}
+
 .tender-page__animal {
 	padding-left: 28px;
-	margin-bottom: 9px;
+	margin-bottom: 6px;
 }
 
 .tender-page__animal:before {
@@ -6073,11 +6218,6 @@ button.btn-price:active, button.btn-price:hover {
 	background-size: 16px;
 }
 
-.tender-page__budget {
-	margin-top: 4px;
-	width: 100%;
-	text-align: left;
-}
 
 .tender-page__actual {
 	height: 20px;
@@ -6086,14 +6226,24 @@ button.btn-price:active, button.btn-price:hover {
 	margin-top: 6px;
 }
 
-.tender-page__info-number {
-	font-size: 10px;
-	padding-top: 20px;
-	width: 40px;
+.tender-page__info-number-wrapper {
+	margin-top: 0;
 }
-.tender-page__info-number:before {
-		font-size: 10px;
-		top: 2px;
+
+.tender-page__info-number-inner {
+	margin-top: 2px;
+}
+
+.tender-page__info-number-views {
+	padding-left: 16px;
+	margin-right: 7px;
+}
+
+.tender-page__info-number-views:before {
+	width: 14px;
+	height: 14px;
+	background-size: 14px;
+	top: 0;
 }
 
 .block-main .col-3 .dropdown .dropdown-menu {
